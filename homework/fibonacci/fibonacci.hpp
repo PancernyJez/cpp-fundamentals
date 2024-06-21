@@ -1,6 +1,6 @@
 #pragma once
 
-int fibonacci_iterative(int sequence) {
+int fibonacci_iterative (int sequence) {
     int t1 = 0,t2 = 1,t3;
     if (sequence == 0) {return t1;}
     else if (sequence == 1 || sequence == 2) {return t2;}
