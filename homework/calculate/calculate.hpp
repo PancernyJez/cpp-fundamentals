@@ -11,7 +11,7 @@ std::string calculate(const std::string& command, int first, int second) {
         int wynik = first * second;
         return std::to_string (wynik);
     } else if (command == "divide"){
-        int wynik =  first / second;
+        float wynik =  (float) first / second;
         return std::to_string (wynik);
     } else return "Invalid data";
     return "";
