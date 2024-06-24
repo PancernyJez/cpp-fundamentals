@@ -14,5 +14,4 @@ std::string calculate(const std::string& command, int first, int second) {
         float wynik =  (float) first / second;
         return std::to_string (wynik);
     } else return "Invalid data";
-    return "";
 }
