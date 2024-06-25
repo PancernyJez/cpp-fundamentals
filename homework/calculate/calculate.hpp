@@ -1,5 +1,7 @@
-std::string calculate(const std::string &command, int first, int second) {
+#pragma once
+#include <string>
 
+std::string calculate(const std::string& command, int first, int second) {
     if (command == "add") {
         int wynik = first + second;
         return std::to_string(wynik);
