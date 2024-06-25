@@ -4,14 +4,14 @@ std::string calculate(const std::string& command, int first, int second) {
     if (command == "add"){ 
         int wynik = first + second;
         return std::to_string (wynik);
-    } else if (command == "substract"){
+    } else if (command == "subtract"){
         int wynik = first - second;
         return std::to_string (wynik);
     } else if (command == "multiply"){
         int wynik = first * second;
         return std::to_string (wynik);
     } else if (command == "divide"){
-        float wynik =  (float) first / second;
+       int wynik =   first / second;
         return std::to_string (wynik);
     } else return "Invalid data";
 }
