@@ -6,6 +6,7 @@ int NWD(int lhs, int rhs) {
   
   if (lhs == 0) {return abs(rhs);}
   else if (rhs == 0) {return abs(lhs);}
+  else if (abs(rhs) == abs(lhs)){return abs(lhs);}
 
   while (dzielnik < abs(lhs) || dzielnik < abs(rhs)) {
     if (lhs % dzielnik == 0 && rhs % dzielnik == 0) {cos = dzielnik; dzielnik++;}
