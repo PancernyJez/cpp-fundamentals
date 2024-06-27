@@ -12,16 +12,15 @@ int NWD(int lhs, int rhs) {
       dzielnik++;
     } else if (lhs % dzielnik != 0 || rhs % dzielnik != 0) {
       dzielnik++;
-    } else
-      return -1;
+    }
+    
   }
   return cos;
 }
 
 int NWW(int lhs, int rhs) {
-  if (lhs == 0 || rhs == 0) {
-    return -1;
-  } else {
+  if (lhs == 0 || rhs == 0){return -1;}
+  else {
     int x = NWD(abs(lhs), abs(rhs));
     return lhs * rhs / x;
   }
