@@ -22,6 +22,6 @@ int NWW(int lhs, int rhs) {
   if (lhs == 0 || rhs == 0){return -1;}
   else {
     int x = NWD(abs(lhs), abs(rhs));
-    return lhs * rhs / x;
+    return abs(lhs) * abs(rhs) / x;
   }
 }
