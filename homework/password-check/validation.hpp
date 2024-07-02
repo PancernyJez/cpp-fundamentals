@@ -1,7 +1,6 @@
 #pragma once
 #include <algorithm>
 #include <cctype>
-#include <iostream>
 
 enum class ErrorCode {
     Ok,
@@ -21,19 +20,19 @@ std::string getErrorMessage(ErrorCode const error) {
             return "Ok\n";
 
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:
-            return "Error: PasswordNeedsAtLeastNineCharacters\n";
+            return "PasswordNeedsAtLeastNineCharacters";
 
         case ErrorCode::PasswordNeedsAtLeastOneNumber:
-            return "Error: PasswordNeedsAtLeastOneNumber\n";
+            return "PasswordNeedsAtLeastOneNumber";
 
         case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
-            return "Error: PasswordNeedsAtLeastOneSpecialCharacter\n";
+            return "PasswordNeedsAtLeastOneSpecialCharacter";
 
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
-            return "Error: PasswordNeedsAtLeastOneUppercaseLetter\n";
+            return "PasswordNeedsAtLeastOneUppercaseLetter";
 
         case ErrorCode::PasswordsDoNotMatch:
-            return "Error: PasswordsDoNotMatch\n";
+            return "PasswordsDoNotMatch";
     }
 }
 
@@ -50,7 +49,6 @@ ErrorCode checkPasswordRules(const std::string &password) {
     if (password.length() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    //    if predycate if there is none of the numbers rerturn errorcode
     else if (std::none_of(password.begin(), password.end(), [](char c) { return std::isdigit(c); })) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     } else if (std::none_of(password.begin(), password.end(), [](char c) { return std::isupper(c); })) {
