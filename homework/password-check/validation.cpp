@@ -1,4 +1,5 @@
-#include "validation.hpp"
+#include "validation.h"
+
 std::string getErrorMessage(ErrorCode error) {
     switch (error) {
         default:
@@ -8,19 +9,19 @@ std::string getErrorMessage(ErrorCode error) {
             return "Ok";
 
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:
-            return "PasswordNeedsAtLeastNineCharacters";
+            return "Password needs at least nine characters";
 
         case ErrorCode::PasswordNeedsAtLeastOneNumber:
-            return "PasswordNeedsAtLeastOneNumber";
+            return "Password needs at least one number";
 
         case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
-            return "PasswordNeedsAtLeastOneSpecialCharacter";
+            return "Password needs at least one special character";
 
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
-            return "PasswordNeedsAtLeastOneUppercaseLetter";
+            return "Password needs at least one uppercase letter";
 
         case ErrorCode::PasswordsDoNotMatch:
-            return "PasswordsDoNotMatch";
+            return "Passwords do not match";
     }
 }
 
