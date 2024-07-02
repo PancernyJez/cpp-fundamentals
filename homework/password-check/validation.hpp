@@ -1,6 +1,7 @@
 #pragma once
 #include <algorithm>
 #include <cctype>
+#include <string>
 
 enum class ErrorCode {
     Ok,
@@ -49,6 +50,7 @@ ErrorCode checkPasswordRules(const std::string &password) {
     if (password.length() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
+    //    if predycate if there is none of the numbers rerturn errorcode
     else if (std::none_of(password.begin(), password.end(), [](char c) { return std::isdigit(c); })) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     } else if (std::none_of(password.begin(), password.end(), [](char c) { return std::isupper(c); })) {
