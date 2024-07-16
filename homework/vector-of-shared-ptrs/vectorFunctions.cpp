@@ -1,5 +1,5 @@
 #include "vectorFunctions.hpp"
-#include <iostream>
+
 std::vector<std::shared_ptr<int>> generate(int count) {
     std::vector<std::shared_ptr<int>> vec;
     for (int i = 0; i < count; ++i) {
@@ -20,12 +20,12 @@ std::vector<std::shared_ptr<int>> generate(int count) {
       }
   }
 
-  void sub10(std::shared_ptr<int> vec){
-        *vec-=10;
+  void sub10(std::shared_ptr<int> ptr){
+        *ptr-=10;
   }
 
   void sub10(std::vector<std::shared_ptr<int>> vec){
-      for (auto& x: vec) {
+      for (auto x: vec) {
           sub10(x);
       }
   }
