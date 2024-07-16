@@ -1,12 +1,15 @@
-#include <vector>
-#include <memory>
-#include <iostream>
+#include "vectorFunctions.hpp"
+
 std::vector<std::shared_ptr<int>> generate(int count) {
     std::vector<std::shared_ptr<int>> vec;
-    for (int i = 0; i < count; i++) {
-        vec.push_back(std::make_shared<int>(i));
+    if (count > 0) {
+        for (int i = 0; i < count; i++) {
+            vec.push_back(std::make_shared<int>(i));
+        }
+        return vec;
+    } else {vec.push_back(std::make_shared<int>(0));
+        return vec;
     }
-    return vec;
 }
 
    void print(const std::vector<std::shared_ptr<int>>& vec){
@@ -31,4 +34,3 @@ std::vector<std::shared_ptr<int>> generate(int count) {
           sub10(x);
       }
   }
-  
