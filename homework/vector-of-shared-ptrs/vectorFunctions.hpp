@@ -1,7 +1,9 @@
 #ifndef vectorFunctions
 #define vectorFunctions
 #pragma once
-#include "vectorFunctions.cpp"
+#include <vector>
+#include <memory>
+#include <iostream>
 std::vector<std::shared_ptr<int>> generate(int vec);
 void print(const std::vector<std::shared_ptr<int>>&  vec);
 void add10( std::vector<std::shared_ptr<int>>&  vec);
