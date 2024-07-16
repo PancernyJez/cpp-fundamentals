@@ -18,13 +18,13 @@ void print(const std::vector<std::shared_ptr<int>> &vec) {
         for (const auto &x: vec) {
             std::cout << *x << '\t';
         }
-        std::cout << std::endl;
     }
 }
 
 void add10(std::vector<std::shared_ptr<int>> &vec) {
+    if (!vec.empty()) {
         for (const auto &x: vec) {
-            if (!vec.empty()) {
+            if (x != nullptr)
             *x += 10;
         }
     }
@@ -37,7 +37,7 @@ void sub10(int* const ptr) {
 
 void sub10(std::vector<std::shared_ptr<int>> &vec) {
     if (!vec.empty()) {
-        for (std::shared_ptr<int>& ptr: vec) {
+        for (auto& ptr: vec) {
             sub10(ptr.get());
         }
     }
