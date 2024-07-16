@@ -23,8 +23,8 @@ void print(const std::vector<std::shared_ptr<int>> &vec) {
 }
 
 void add10(std::vector<std::shared_ptr<int>> &vec) {
-    if (!vec.empty()) {
         for (const auto &x: vec) {
+            if (!vec.empty()) {
             *x += 10;
         }
     }
